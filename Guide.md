@@ -206,6 +206,7 @@ Both `C0` and `B0` use `Set system identification`. Check the device type and th
 
 ## 参考来源 / References
 
+- 我找到 `n1ctm07w.zip` 的帖子 / Where I found `n1ctm07w.zip` · [MODXI · Golden Key U1 Tool](https://modxi.com/threads/golden-key-u1-tool-dmi-editor-laptop-lenovo-boot-usb.2004/)
 - [Lenovo ThinkPad Maintenance Utilities 支持入口](https://support.lenovo.com/us/en/downloads/ds102472)
 - [Lenovo ThinkPad X1 Carbon Gen 9 官方手册下载页](https://pcsupport.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-x-series-laptops/thinkpad-x1-carbon-9th-gen-type-20xw-20xx/document-userguide)
 - [Lenovo X1 Carbon Gen 9 和 X1 Yoga Gen 6 用户指南](https://download.lenovo.com/pccbbs/mobiles_pdf/x1_carbon_gen9_x1_yoga_gen6_ug_en.pdf)
