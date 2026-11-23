@@ -18,6 +18,8 @@
 
 这些流程通过 `LenovoEeprom` 固件接口读写设备记录。步骤见 [V1.11 使用教程](Guide.md#zh)。
 
+外层 EFI 和 8 个内嵌模块的 [完整反汇编](analysis/)。
+
 ## English
 
 We looked at `EFI/Boot/BootX64.efi` in `n1ctm07w.zip`, version **V1.11 (x64)**. These notes are based on disassembling the menu and validation paths. We also ran the UUID presence check in an isolated CPU emulator.
@@ -31,3 +33,5 @@ We looked at `EFI/Boot/BootX64.efi` in `n1ctm07w.zip`, version **V1.11 (x64)**. 
 | System UUID | `Assign UUID` proceeds only after reading 16 zero bytes. An all-`FF` value is treated as an existing UUID. `Planar service` can write a new UUID at its final confirmation. `Written data is unmatch` means the readback comparison failed, even if the utility goes on to display a result. |
 
 The utility reaches these records through the firmware's `LenovoEeprom` interface. These findings describe the application code in this package. For the steps, see the [V1.11 user guide](Guide.md#english).
+
+The [full disassembly](analysis/) includes the outer EFI image and all eight embedded modules.
