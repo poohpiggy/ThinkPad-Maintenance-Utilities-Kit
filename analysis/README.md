@@ -16,13 +16,20 @@ SHA-256 `d25fde71663b77e28e76f01cdd56030772a348be79a78c5ffed7b5d285f52993`
 
 可执行区用 Capstone 5.0.7 按 x64 线性反汇编，其他区域列出原始字节。每行保留文件偏移、RVA 和字节，九份列表合起来覆盖 `BootX64.efi` 的 783,800 个字节。
 
+### 模块细读
+
+- [SERUPDT](modules/SERUPDT.md#zh) · `C0`、`B0`、旧记录布局和迁移
+- [CFGUPDT](modules/CFGUPDT.md#zh) · 机型名称的输入、存储和读回
+- [AUTOUUID](modules/AUTOUUID.md#zh) · UUID 现值判断、生成和校验
+- [PLNSRV](modules/PLNSRV.md#zh) · 换板向导的阶段、参数与提交顺序
+
 ### 配置文件参数
 
 | 文件与节 | 参数 | 原包值 | 行为 |
 | --- | --- | --- | --- |
 | `tpconfig.ini` · `[advanced features]` | `hide_adv` | `1` | `1` 选择传统菜单，`0` 选择带 `Planar service` 的高级菜单。 |
 | `tpconfig.ini` · `[advanced features]` | `hide_eep_init` | `0` | 在高级菜单中，`0` 显示 `5 - Initialize EEPROM`，`1` 隐藏该项。 |
-| `plnsrv.ini` · `[steps]` | `config_kb` | `1` | `1` 启用键盘语言 ID 步骤，`0` 跳过。 |
+| `plnsrv.ini` · `[steps]` | `config_kb` | `1` | `1` 在固件提供键盘配置协议时加入键盘语言 ID 步骤，`0` 跳过。 |
 | `plnsrv.ini` · `[steps]` | `silent_uuid` | `0` | `0` 单独询问是否生成新 UUID，`1` 跳过这道提问。两种设置都保留向导结束时的汇总确认。 |
 | `plnsrv.ini` · `[Keyboard]` | 四位键盘语言 ID | 例如 `0409=US English` | 向导用输入的四位 ID 查找对应的语言名称。 |
 | `plnsrv.ini` · `[brand name]` | 四位机器类型 | 例如 `20N2=ThinkPad T490` | 向导从整机标识取四位机器类型，查找可供选择的机型名称。 |
@@ -67,13 +74,20 @@ Start with `layout.tsv` for each image's offset in `BootX64.efi`, size, and entr
 
 Executable sections use a linear x64 disassembly from Capstone 5.0.7. The remaining ranges are listed as raw bytes. The file offset, RVA, and byte columns across all nine listings cover the 783,800 bytes of `BootX64.efi`.
 
+### Module walkthroughs
+
+- [SERUPDT](modules/SERUPDT.md#english) · `C0`, `B0`, legacy record layout, and migration
+- [CFGUPDT](modules/CFGUPDT.md#english) · Product name input, storage, and readback
+- [AUTOUUID](modules/AUTOUUID.md#english) · UUID presence, generation, and verification
+- [PLNSRV](modules/PLNSRV.md#english) · Board replacement wizard stages, parameters, and write order
+
 ### Configuration file settings
 
 | File and section | Setting | Included value | Behavior |
 | --- | --- | --- | --- |
 | `tpconfig.ini` · `[advanced features]` | `hide_adv` | `1` | `1` selects the traditional menu and `0` selects the advanced menu with `Planar service`. |
 | `tpconfig.ini` · `[advanced features]` | `hide_eep_init` | `0` | In the advanced menu, `0` shows `5 - Initialize EEPROM` and `1` hides it. |
-| `plnsrv.ini` · `[steps]` | `config_kb` | `1` | `1` enables the keyboard language ID step and `0` skips it. |
+| `plnsrv.ini` · `[steps]` | `config_kb` | `1` | `1` adds the keyboard language ID step when the firmware provides its keyboard configuration protocol. `0` skips it. |
 | `plnsrv.ini` · `[steps]` | `silent_uuid` | `0` | `0` asks separately whether to generate a new UUID. `1` skips that prompt. Both settings keep the final confirmation for all pending changes. |
 | `plnsrv.ini` · `[Keyboard]` | Four-character keyboard language ID | For example, `0409=US English` | The wizard looks up the language name using the four-character ID entered. |
 | `plnsrv.ini` · `[brand name]` | Four-character machine type | For example, `20N2=ThinkPad T490` | The wizard takes the four-character machine type from the system identifier and looks up a product name the operator can select. |
