@@ -92,11 +92,7 @@
 
 1. 退出工具并拔掉 U 盘。开机按 `F1` 进入 BIOS，核对可见的 MTM、整机 S/N 和 UUID，再确认正常启动且相关开机报错消失。
 2. 主板条码以工具的 `B0` 读回值和实物标签为准。机型名称以 `Read brand name from EEPROM` 读回为准，也可以对照系统显示的产品名称。
-3. 在 Windows 上打开 PowerShell 7，进入 [Get-ThinkPadIdentity.ps1](Get-ThinkPadIdentity.ps1) 所在的目录，运行下面的命令。脚本通过 CIM 读取 SMBIOS 信息，用于交叉检查 MTM、产品名称、整机序列号、UUID、主板型号和主板序列号。部分机型只公开部分字段，板号仍以维护工具和主板标签为准。
-
-   ```powershell
-   pwsh -NoProfile -File .\Get-ThinkPadIdentity.ps1
-   ```
+3. 解压下载包后，在 Windows 上双击 [Get-ThinkPadIdentity.cmd](Get-ThinkPadIdentity.cmd)。窗口显示 MTM、产品名称、整机序列号、UUID、主板型号和主板序列号，按任意键关闭。部分机型只公开部分字段，板号仍以维护工具和主板标签为准。
 
 ### 常见问题
 
@@ -195,11 +191,7 @@ Both `C0` and `B0` use `Set system identification`. Check the device type and th
 
 1. Exit the utility and remove the USB drive. At startup, press `F1` to enter the BIOS and check the MTM, system serial number, and UUID it displays. Then confirm the machine boots and the related startup error is gone.
 2. Compare `B0` from the maintenance utility with the physical board label. Use `Read brand name from EEPROM` to check the product name and compare it with what the OS displays if useful.
-3. In Windows, open PowerShell 7 in the folder containing [Get-ThinkPadIdentity.ps1](Get-ThinkPadIdentity.ps1) and run the command below. The script reads SMBIOS through CIM and shows the MTM, product name, system serial number, UUID, board product, and board serial number. Some models expose only part of this information. Check the board barcode using the maintenance utility and the board label.
-
-   ```powershell
-   pwsh -NoProfile -File .\Get-ThinkPadIdentity.ps1
-   ```
+3. After extracting the download, double-click [Get-ThinkPadIdentity.cmd](Get-ThinkPadIdentity.cmd) in Windows. It displays the MTM, product name, system serial number, UUID, board product, and board serial number. Press any key to close the window. Some models expose only part of this information. Check the board barcode using the maintenance utility and the board label.
 
 ### Troubleshooting
 

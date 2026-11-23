@@ -18,7 +18,7 @@
 
 这些流程通过 `LenovoEeprom` 固件接口读写设备记录。步骤见 [V1.11 使用教程](Guide.md#zh)。
 
-外层 EFI 和 8 个内嵌模块的 [完整反汇编](analysis/)。
+菜单调用、INI 开关和字段校验的位置见 [参数说明和完整反汇编](analysis/README.md#zh)。
 
 ## English
 
@@ -34,4 +34,4 @@ I looked at `EFI/Boot/BootX64.efi` in `n1ctm07w.zip`, version **V1.11 (x64)**. T
 
 The utility reaches these records through the firmware's `LenovoEeprom` interface. These findings describe the application code in this package. For the steps, see the [V1.11 user guide](Guide.md#english).
 
-The [full disassembly](analysis/) includes the outer EFI image and all eight embedded modules.
+See the [parameter reference and full disassembly](analysis/README.md#english) for the menu calls, INI settings, and field checks.
