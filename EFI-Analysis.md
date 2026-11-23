@@ -6,7 +6,7 @@
 
 ## 中文
 
-我们看的是 `n1ctm07w.zip` 里的 `EFI/Boot/BootX64.efi`（**V1.11，X64**）。下面这些是从菜单和关键分支追出来的。UUID 的判断另外做了指令模拟。
+我看的是 `n1ctm07w.zip` 里的 `EFI/Boot/BootX64.efi`（**V1.11，X64**）。下面这些是从菜单和关键分支追出来的。UUID 的判断另外做了指令模拟。
 
 | 项目 | 已确认的行为 |
 | --- | --- |
@@ -22,7 +22,7 @@
 
 ## English
 
-We looked at `EFI/Boot/BootX64.efi` in `n1ctm07w.zip`, version **V1.11 (x64)**. These notes are based on disassembling the menu and validation paths. We also ran the UUID presence check in an isolated CPU emulator.
+I looked at `EFI/Boot/BootX64.efi` in `n1ctm07w.zip`, version **V1.11 (x64)**. These notes are based on disassembling the menu and validation paths. I also ran the UUID presence check in an isolated CPU emulator.
 
 | Item | What V1.11 does |
 | --- | --- |

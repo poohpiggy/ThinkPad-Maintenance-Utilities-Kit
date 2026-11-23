@@ -6,7 +6,7 @@
 
 ## 中文
 
-这是我们整理的 ThinkPad 换板笔记，从制作维护 U 盘写到恢复机器信息和读回核对。用的是 [`n1ctm07w.zip`](n1ctm07w.zip) 里的 **ThinkPad Maintenance Utilities V1.11（X64）**。
+这是我整理的 ThinkPad 换板笔记，从制作维护 U 盘写到恢复机器信息和读回核对。用的是 [`n1ctm07w.zip`](n1ctm07w.zip) 里的 **ThinkPad Maintenance Utilities V1.11（X64）**。
 
 先翻一下对应型号的 Lenovo《硬件维护手册》。有些机型用其他版本，或指定使用 System Board Self-Repair Tool。
 
@@ -111,7 +111,7 @@
 
 ## English
 
-These are our notes on restoring machine information after a ThinkPad system board replacement. They cover **ThinkPad Maintenance Utilities V1.11 (x64)** in [`n1ctm07w.zip`](n1ctm07w.zip), from making the USB drive to checking the values afterward.
+These are my notes on restoring machine information after a ThinkPad system board replacement. They cover **ThinkPad Maintenance Utilities V1.11 (x64)** in [`n1ctm07w.zip`](n1ctm07w.zip), from making the USB drive to checking the values afterward.
 
 Check the Lenovo Hardware Maintenance Manual for your exact model first. Some models call for a different version or the System Board Self-Repair Tool. For details on what V1.11 does with the values you enter, see the [EFI analysis notes](EFI-Analysis.md#english).
 
