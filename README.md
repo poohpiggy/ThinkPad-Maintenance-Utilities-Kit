@@ -1,10 +1,8 @@
 # ThinkPad Maintenance Utilities Kit
 
-本来只是想把 ThinkPad 换板后那几个号怎么填写清楚。后来拆开 `BootX64.efi` 看了下，发现菜单编号会变，`C0`、`B0` 和 UUID 也各有自己的判断，就一起记下来了。
+本仓库收录 **ThinkPad Maintenance Utilities V1.11（x64）**，用于在 ThinkPad 更换主板后恢复机器类型和型号（MTM）、整机序列号、主板条码、机型名称和 UUID。配套 PowerShell 脚本可在 Windows 中只读核对整机和主板的标识信息。
 
-- [使用教程 / User Guide](Guide.md) — 做启动盘、补回机器信息、写完读回核对。
-- [EFI 分析笔记 / EFI Analysis](EFI-Analysis.md) — 菜单、输入校验和 UUID 的判断，附完整反汇编。
+This repository contains **ThinkPad Maintenance Utilities V1.11 (x64)** for restoring the machine type model (MTM), system serial number, board barcode, product name, and UUID after a ThinkPad system board replacement. The included PowerShell script provides a read-only check of system and board identifiers in Windows.
 
-`n1ctm07w.zip` 是 V1.11 x64 工具包。进 Windows 后，可以用 `Get-ThinkPadIdentity.ps1` 看整机和主板的信息。
-
-Both pages have an English section. The guide covers what to fill in after a board swap. The EFI notes show how V1.11 handles those fields and link to the full disassembly.
+- [使用教程 / User Guide](Guide.md)
+- [EFI 分析笔记 / EFI Analysis](EFI-Analysis.md)
